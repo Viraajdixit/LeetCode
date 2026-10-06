@@ -1,20 +1,25 @@
 class Solution {
-    public boolean isPalindrome(String s) {
+    public boolean isPalindrome(String s)
+    {
         s=s.toLowerCase();
         String str="";
         String str2="";
         for(int i=0;i<s.length();i++)
         {
             char ch = s.charAt(i);
-            if(((int)ch>=97 && (int)ch<=122) || ((int)ch>=48 && (int)ch<=57))
-            str=str+ch;
+            if((ch>='0'&&ch<='9')||(ch>='a' && ch<='z'))
+            {
+                str=str+ch;
+            }
         }
-        for(int i=str.length()-1;i>=0;i--)
+        for(int j=str.length();j>0;j--)
         {
-            str2=str2+str.charAt(i);
-        }
-        if(str.equals(str2) || str.isEmpty())
+            char ch2=str.charAt(j-1);
+            str2=str2+ch2;
+        }   
+        if(str2.equals(str))
         return true;
-    return false;
+
+        return false;
     }
 }
