@@ -12,11 +12,6 @@ class Solution {
         {
         for(int i=0;i<nums.length;i++)
         {
-            if(i!=nums.length-1)
-            {
-            if(nums[i]==nums[i+1] && nums[i]==0 )
-            continue;
-            }
             if(nums[i]!=0)
             {
                 int temp=nums[i];
